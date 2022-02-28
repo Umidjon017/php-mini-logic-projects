@@ -1,0 +1,64 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #444;
+}
+
+.bs2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bs2 h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 5rem;
+    color: #111111;
+    margin: 1rem 0;
+}
+
+.cal-9 {
+    margin: 0 3rem 0 0;
+}
+
+.cal-10 {
+    margin: 0 3rem 0 0;
+}
+
+.cal-12 {
+    margin: 0 0 0 3rem;
+}
+
+.card {
+    text-align: center;
+    border-radius: 5%;
+    margin: 1rem;
+    background-color: #555;
+    color: #111111;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #999;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card a {
+    color: #999;
+}
+
+.info {
+    font-size: 1.3rem;
+}
+
+.info span {
+    font-size: 1rem;
+    color: #999999;
+}

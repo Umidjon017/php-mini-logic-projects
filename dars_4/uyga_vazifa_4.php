@@ -31,13 +31,13 @@
                             Vazifalar
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-divider" href="#">1-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">1-Matematik amallar</a></li>
                             <li><a class="dropdown-item" href="../dars_1/uyga_vazifa_1.php">Uyga vazifa-1</a></li>
-                            <li><a class="dropdown-divider" href="#">2-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">2-PHP shart amallar</a></li>
                             <li><a class="dropdown-item" href="../dars_2/uyga_vazifa_2.php">Uyga vazifa-2</a></li>
-                            <li><a class="dropdown-divider" href="#">3-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">3-PHP arraylar</a></li>
                             <li><a class="dropdown-item" href="../dars_3/uyga_vazifa_3.php">Uyga vazifa-3</a></li>
-                            <li><a class="dropdown-divider" href="#">4-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">4-GET, POST, REQUEST</a></li>
                             <li><a class="dropdown-item" href="uyga_vazifa_4.php">Uyga vazifa-4</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -66,64 +66,18 @@
         $li5 = 'menu 4';
 
         $card1 = 'Misol 1';
-        $card12 = "Ko'p qismli Array ichidan array orqali olish";
-        $card13 = [
-            'salom',
-            'yaxshi',
-            'raxmat',
-            'qalay',
-            [
-                '12',
-                '34',
-                '56',
-                [
-                    'men',
-                    'sen',
-                    'u',
-                ]
-            ]
-        ];
+        $card11 = "USD -> UZS";
 
         $card2 = 'Misol 2';
-        $card22 = "Ko'p qismli Array ichidan for orqali olish";
-        $card23 = [
-            'salom',
-            'yaxshi',
-            'raxmat',
-            'qalay',
-            [
-                '12',
-                '34',
-                '56',
-                [
-                    'men',
-                    'sen',
-                    'u',
-                ]
-            ]
-        ];
+        $card21 = "Registration form";
 
         $card3 = 'Misol 3';
-        $card32 = "USD -> UZS";
+        $card31 = "Addition form <br> The first part <br> <br> (num1 + num2) * (num3 + num4) ";
 
         $card4 = 'Misol 4';
-        $card41 = "Addition form <br> The first part";
-        $card42 = [1, 2, 3, 4, 5, 6, 7, 8];
+        $card41 = "Sonlarni arifmetik amallarga solish";
 
         #region RULES FOR CARD
-        $card5 = 'Misol 5';
-        $card51 = "Arrayni juft/toq qiymatlarini chiqarish";
-        $card52 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-        $card6 = 'Misol 6';
-        $card61 = "Arrayni juft/toq qiymatlarini chiqarish";
-        $card62 = [
-            'name' => 'Umidjon',
-            'age' => '22',
-            'address' => 'Andijon',
-            'study' => 'University'
-        ];
-
         $card7 = 'Misol 7';
         $card71 = "Arraydan tasodifiy so'zni chiqarish";
         $card72 = [
@@ -160,64 +114,13 @@
         ?>
         <section class="bs2">
             <div class="container">
-                <h1 class="display-2">PHP arraylar 2-qism</h1>
+                <h1 class="display-2">PHP GET, POST, REQUEST</h1>
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h3 class="card-title"><?= $card1 . ':'; ?></h3>
-                                <h5 class="card-subtitle mb-2"> <?= $card12 . ':'; ?> </h5>
-                                <p class="card-text">
-                                    <?php
-                                    echo "<pre>";
-                                    print_r($card13);
-                                    echo "</pre> <hr>";
-
-                                    echo "<pre>";
-                                    print_r($card13[4][3][2]);
-                                    echo "</pre> <hr>";
-                                    ?>
-                                </p>
-                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
-                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h3 class="card-title"><?= $card2 . ':'; ?></h3>
-                                <h5 class="card-subtitle mb-2"> <?= $card22 . ":"; ?> </h5>
-                                <p class="card-text">
-                                    <?php
-                                    echo "<pre>";
-                                    function getArreayAll($a)
-                                    {
-                                        for ($i = 0; $i < count($a); $i++) {
-                                            if (is_array($a[$i])){
-                                                getArreayAll($a[$i]);
-                                            }
-                                            else {
-                                                echo "<span style='color: red'>$a[$i]</span> <br>";
-                                            }
-                                        }
-                                    }
-                                    getArreayAll($card23);
-                                    echo "</pre> <hr>";
-                                    ?>
-                                </p>
-                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
-                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h3 class="card-title"><?= $card3 . ':'; ?></h3>
-                                <h5 class="card-subtitle mb-2"> <?= $card32; ?> </h5>
+                                <h5 class="card-subtitle mb-2"> <?= $card11; ?> </h5>
                                 <p class="card-text">
                                 <form action="uyga_vazifa_4.2.php" method="get">
                                     <input type="number" name="usd" class="form-control">
@@ -233,44 +136,96 @@
                     <div class="col-sm-3">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <h3 class="card-title"><?= $card3 . ':'; ?></h3>
-                                <h5 class="card-subtitle mb-2"> <?= $card32; ?> </h5>
+                                <h3 class="card-title"><?= $card2 . ':'; ?></h3>
+                                <h5 class="card-subtitle mb-2"> <?= $card21; ?> </h5>
                                 <p class="card-text">
                                 <form action="uyga_vazifa_4.3.php" method="get">
-                                    <input type="text" name="fname" class="form-control" placeholder="Your name"> <br>
-                                    <input type="text" name="sname" class="form-control" placeholder="Your second name"> <br>
+                                    <input type="text" name="fname" class="form-control mb-3" placeholder="Your name">
+                                    <input type="text" name="sname" class="form-control mb-2" placeholder="Your second name">
                                     <label>Your gender: </label> <br>
                                     <input type="radio" name="gender" class="form-check-input" value="male">
                                     <label for="male" class="form-check-label">Male</label> <br>
                                     <input type="radio" name="gender" class="form-check-input" value="female">
-                                    <label for="female" class="form-check-label">Female</label> <br> <br>
-                                    <input type="text" name="country" class="form-control" placeholder="Your country"> <br>
+                                    <label for="female" class="form-check-label">Female</label>
+                                    <input type="text" name="country" class="form-control mt-2 mb-3" placeholder="Your country">
                                     <input type="text" name="village" class="form-control" placeholder="Your village">
                                     <input type="submit" name="s1" value="Send" class="btn btn-success mt-2">
                                 </form>
-                                    <?php
-                                    echo "<pre>";
-                                    echo "</pre> <hr>";
-                                    ?>
                                 </p>
                                 <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
                                 <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title"><?= $card3 . ':'; ?></h3>
+                                <h5 class="card-subtitle mb-2"> <?= $card31; ?> </h5>
+                                <p class="card-text">
+                                <form action="uyga_vazifa_4.4.php" method="get">
+                                    <input type="number" name="num1" class="form-control mb-3" placeholder="Your first number">
+                                    <input type="number" name="num2" class="form-control" placeholder="Your second number">
+                                    <input type="submit" name="s1" value="Submit" class="btn btn-success mt-2">
+                                </form>
+                                </p>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-sm-3">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h3 class="card-title"><?= $card4 . ':'; ?></h3>
                                 <h5 class="card-subtitle mb-2"> <?= $card41; ?> </h5>
                                 <p class="card-text">
-                                <form action="uyga_vazifa_4.4.php" method="get">
-                                    <input type="number" name="num1" class="form-control" placeholder="Your first number"> <br>
-                                    <input type="number" name="num2" class="form-control" placeholder="Your second number">
-                                    <input type="submit" name="s1" value="Submit" class="btn btn-success mt-2">
+                                <form action="uyga_vazifa_4.php" method="post">
+                                    <input type="number" name="num1" class="form-control mb-3" placeholder="Your first number">
+                                    <select name="amallar">
+                                        <option value="plus" name="plus">+</option>
+                                        <option value="minus" name="minus">-</option>
+                                        <option value="multiply" name="multiply">*</option>
+                                        <option value="divide" name="divide">/</option>
+                                        <?php
+                                        $num1 = $_POST['num1'];
+                                        $num2 = $_POST['num2'];
+                                        $num_plus = $num1 + $num2;
+                                        $num_minus = $num1 - $num2;
+                                        $num_multiply = $num1 * $num2;
+                                        $num_divide = $num1 / $num2;
+                                        ?>
+                                    </select>
+                                    <input type="number" name="num2" class="form-control mt-3" placeholder="Your second number">
+                                    <input type="submit" name="s1" value="Resolve" class="btn btn-success mt-2 mb-2"> <br>
+                                    <input type="text" name="sum" class="form-control" value="
+                                        <?php
+                                    function isIsset()
+                                    {
+                                        return isset($_POST['num1']) && !empty($_POST['num1']) && isset($_POST['num2']) && !empty($_POST['num2']);
+                                    }
+                                    if (isIsset()) {
+                                        if ($_POST['amallar'] == 'plus')
+                                        {
+                                            echo $num_plus;
+                                        }
+                                        elseif ($_POST['amallar'] == "minus")
+                                        {
+                                            echo $num_minus;
+                                        }
+                                        elseif ($_POST['amallar'] == "multiply")
+                                        {
+                                            echo $num_multiply;
+                                        }
+                                        elseif ($_POST['amallar'] == "divide")
+                                        {
+                                            echo $num_divide;
+                                        }
+                                    }
+                                    ?>
+                                    ">
                                 </form>
                                 </p>
                                 <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>

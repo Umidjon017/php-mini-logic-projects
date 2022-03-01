@@ -31,13 +31,13 @@
                             Vazifalar
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-divider" href="#">1-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">1-Matematik amallar</a></li>
                             <li><a class="dropdown-item" href="../dars_1/uyga_vazifa_1.php">Uyga vazifa-1</a></li>
-                            <li><a class="dropdown-divider" href="#">2-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">2-PHP shart amallar</a></li>
                             <li><a class="dropdown-item" href="../dars_2/uyga_vazifa_2.php">Uyga vazifa-2</a></li>
-                            <li><a class="dropdown-divider" href="#">3-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">3-PHP arraylar</a></li>
                             <li><a class="dropdown-item" href="../dars_3/uyga_vazifa_3.php">Uyga vazifa-3</a></li>
-                            <li><a class="dropdown-divider" href="#">4-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">4-GET, POST, REQUEST</a></li>
                             <li><a class="dropdown-item" href="uyga_vazifa_4.php">Uyga vazifa-4</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>

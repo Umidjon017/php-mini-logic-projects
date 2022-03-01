@@ -31,13 +31,13 @@
                             Vazifalar
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-divider" href="#">1-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">1-Matematik amallar</a></li>
                             <li><a class="dropdown-item" href="../dars_1/uyga_vazifa_1.php">Uyga vazifa-1</a></li>
-                            <li><a class="dropdown-divider" href="#">2-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">2-PHP shart amallar</a></li>
                             <li><a class="dropdown-item" href="../dars_2/uyga_vazifa_2.php">Uyga vazifa-2</a></li>
-                            <li><a class="dropdown-divider" href="#">3-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">3-PHP arraylar</a></li>
                             <li><a class="dropdown-item" href="uyga_vazifa_3.php">Uyga vazifa-3</a></li>
-                            <li><a class="dropdown-divider" href="#">4-dars</a></li>
+                            <li><a class="dropdown-divider" href="#">4-GET, POST, REQUEST</a></li>
                             <li><a class="dropdown-item" href="../dars_4/uyga_vazifa_4.php">Uyga vazifa-4</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -127,6 +127,44 @@
             '8' => '../images/8.PNG',
             '9' => '../images/9.jpg',
             '10' => '../images/10.jpg',
+        ];
+
+        $card9 = 'Misol 9';
+        $card91 = "Ko'p qismli Array ichidan array orqali olish";
+        $card92 = [
+            'salom',
+            'yaxshi',
+            'raxmat',
+            'qalay',
+            [
+                '12',
+                '34',
+                '56',
+                [
+                    'men',
+                    'sen',
+                    'u',
+                ]
+            ]
+        ];
+
+        $card10 = 'Misol 10';
+        $card101 = "Ko'p qismli Array ichidan for orqali olish";
+        $card102 = [
+            'salom',
+            'yaxshi',
+            'raxmat',
+            'qalay',
+            [
+                '12',
+                '34',
+                '56',
+                [
+                    'men',
+                    'sen',
+                    'u',
+                ]
+            ]
         ];
 
         $cardbt = "To'g'ri";
@@ -297,6 +335,57 @@
                                     echo "<pre>";
                                     echo "<img style='width:250px' src='". $card82[random_int(1,10)] ."'>";
                                     echo "</pre>";
+                                    ?>
+                                </p>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title"><?= $card9 . ':'; ?></h3>
+                                <h5 class="card-subtitle mb-2"> <?= $card91 . ':'; ?> </h5>
+                                <p class="card-text">
+                                    <?php
+                                    echo "<pre>";
+                                    print_r($card92);
+                                    echo "</pre> <hr>";
+
+                                    echo "<pre>";
+                                    print_r($card92[4][3][2]);
+                                    echo "</pre> <hr>";
+                                    ?>
+                                </p>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title"><?= $card10 . ':'; ?></h3>
+                                <h5 class="card-subtitle mb-2"> <?= $card101 . ":"; ?> </h5>
+                                <p class="card-text">
+                                    <?php
+                                    echo "<pre>";
+                                    function getArreayAll($a)
+                                    {
+                                        for ($i = 0; $i < count($a); $i++) {
+                                            if (is_array($a[$i])){
+                                                getArreayAll($a[$i]);
+                                            }
+                                            else {
+                                                echo "<span style='color: red'>$a[$i]</span> <br>";
+                                            }
+                                        }
+                                    }
+                                    getArreayAll($card102);
+                                    echo "</pre> <hr>";
                                     ?>
                                 </p>
                                 <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>

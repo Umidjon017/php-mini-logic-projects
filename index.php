@@ -60,6 +60,8 @@
         <a href="dars_3/uyga_vazifa_3.php" class="btn btn-primary">Uyga vazifa 3</a>
         |
         <a href="dars_4/uyga_vazifa_4.php" class="btn btn-primary">Uyga vazifa 4</a>
+        |
+        <a href="dars_5/uyga_vazifa_5.php" class="btn btn-primary">Uyga vazifa 5</a>
     </div>
 
 

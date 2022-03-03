@@ -1,10 +1,39 @@
+<?php
+    $li1 = 'Bosh sahifa';
+    $li2 = 'menu 1';
+    $li3 = 'menu 2';
+    $li4 = 'menu 3';
+    $li5 = 'menu 4';
+
+    $card3 = "Registered user's information";
+    $card33 = "Go home";
+    $card34 = "Previous";
+    ?>
+    <?php
+    function isIsset()
+    {
+        return (isset($_POST['height']) && isset($_POST['width']) && isset($_POST['color']) && isset($_POST['position']) && isset($_POST['title']) && isset($_POST['year']) && isset($_POST['author']))
+            && (!empty($_POST['height']) && !empty($_POST['width']) && !empty($_POST['color']) && !empty($_POST['position']) && !empty($_POST['title']) && !empty($_POST['year']) && !empty($_POST['author']));
+    }
+    if (isIsset())
+    {
+        $height = $_POST['height'];
+        $width = $_POST['width'];
+        $color = $_POST['color'];
+        $position = $_POST['position'];
+        $title = $_POST['title'];
+        $year = $_POST['year'];
+        $author = $_POST['author'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Uyga vazifa | PHP shart amallar</title>
+        <title><?= $title ?>></title>
         <!--  Bootstrap CSS link  -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="../index.css">
@@ -60,45 +89,16 @@
 
     <div class="container-fluid">
         <!-- Card -->
-        <?php
-        $li1 = 'Bosh sahifa';
-        $li2 = 'menu 1';
-        $li3 = 'menu 2';
-        $li4 = 'menu 3';
-        $li5 = 'menu 4';
-
-        $card3 = "Registered user's information";
-        $card33 = "Go home";
-        $card34 = "Previous";
-        ?>
         <section class="bs2">
             <div class="container">
                 <h1 class="display-2">Form exercises</h1>
                 <div class="row">
-                    <div class="col-sm-5 offset-4">
-                        <div class="card" style="width: 18rem;">
+                    <div class="col-sm-6 offset-3">
+                        <div class="card" style="height: <?= $height;?>rem; width: <?= $width?>rem; background-color: <?= $color?>; position: <?= $position?>; ">
                             <div class="card-body">
                                 <h3 class="card-title"><?= $card3 . ':'; ?></h3>
                                 <h5 class="card-subtitle mb-2"> </h5>
-                                <p class="card-text">
-                                    <?php
-                                    echo "<pre>";
-                                    if ((isset($_GET['fname']) && isset($_GET['sname']) && isset($_GET['gender']) && isset($_GET['country']) && isset($_GET['village'])))
-                                    {
-                                        $fname = $_GET['fname'];
-                                        $sname = $_GET['sname'];
-                                        $gender = $_GET['gender'];
-                                        $country = $_GET['country'];
-                                        $village = $_GET['village'];
-                                    }
-                                    echo "</pre>";
-                                    ?>
-                                <h3 class="info">First name: <span> <?= $fname ?> </span> </h3>
-                                <h3 class="info">Second name: <span> <?= $sname ?> </span> </h3>
-                                <h3 class="info">Gender: <span> <?= $gender ?> </span> </h3>
-                                <h3 class="info">Country: <span> <?= $country ?> </span> </h3>
-                                <h3 class="info">Village: <span> <?= $village ?> </span> </h3>
-                                </p>
+                                <p class="card-text"></p>
                                 <a href="../index.php" class="card-link btn btn-dark"><?= $card33; ?> </a>
                                 <a href="uyga_vazifa_4.php" class="card-link btn btn-success"><?= $card34; ?> </a>
                             </div>
@@ -114,4 +114,8 @@
     <!--  Bootstrap JS link  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
+
+    <footer class="text-muted d-flex justify-content-center mt-5">
+        <p> <?= $year . ' | ' . $author ; ?> &copy;</p>
+    </footer>
 </html>

@@ -39,6 +39,8 @@
                             <li><a class="dropdown-item" href="../dars_3/uyga_vazifa_3.php">Uyga vazifa-3</a></li>
                             <li><a class="dropdown-divider" href="#">4-GET, POST, REQUEST</a></li>
                             <li><a class="dropdown-item" href="uyga_vazifa_4.php">Uyga vazifa-4</a></li>
+                            <li><a class="dropdown-divider" href="#">5-SERVER requests</a></li>
+                            <li><a class="dropdown-item" href="../dars_5/uyga_vazifa_5.php">Uyga vazifa-5</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
@@ -77,40 +79,18 @@
         $card4 = 'Misol 4';
         $card41 = "Sonlarni arifmetik amallarga solish";
 
-        #region RULES FOR CARD
-        $card7 = 'Misol 7';
-        $card71 = "Arraydan tasodifiy so'zni chiqarish";
-        $card72 = [
-            '1' => "Kam gapir, ko'p eshit!",
-            '2' => "Ko'p gap, eshakka yuk!",
-            '3' => "Vatanni sevmoq imondandir!",
-            '4' => "Qush inida ko'rganini qiladi!",
-            '5' => "Albatta ochiq chehralik ham sadaqadir!",
-            '6' => "Amallar niyyatga bog'liqdir!",
-            '7' => "Atrofingdagilarni qanchalik o'sishi, sening muvaffaqiyatingni ham belgilaydi!",
-            '8' => "So'rab o'rgangan olim, orlanib so'ramagan o'ziga zolim!",
-            '9' => "Toma-toma daryo bo'lur!",
-            '10' => "Aql yoshdamas, boshda!",
-        ];
+        $card5 = "Misol 5";
+        $card51 = "Saytning stillarini sozlang";
 
-        $card8 = 'Misol 8';
-        $card81 = "Arraydan tasodifiy rasmni chiqarish";
-        $card82 = [
-            '1' => '../images/1.jpg',
-            '2' => '../images/2.jpeg',
-            '3' => '../images/3.jpg',
-            '4' => '../images/4.jpg',
-            '5' => '../images/5.jpg',
-            '6' => '../images/6.jpg',
-            '7' => '../images/7.jpg',
-            '8' => '../images/8.PNG',
-            '9' => '../images/9.jpg',
-            '10' => '../images/10.jpg',
-        ];
+        $card6 = "Misol 6";
+        $card61 = "Mahsulotlar ro'yxati";
+        $card62 = "Kitoblar ro'yxati:";
+        $card63 = "Telefonlar ro'yxati:";
+        $card64 = "Nechta kitob sotib olmoqchisiz?";
+        $card65 = "Nechta telefon sotib olmoqchisiz?";
 
         $cardbt = "To'g'ri";
         $cardbf = "Noto'g'ri";
-        #endregion
         ?>
         <section class="bs2">
             <div class="container">
@@ -122,9 +102,12 @@
                                 <h3 class="card-title"><?= $card1 . ':'; ?></h3>
                                 <h5 class="card-subtitle mb-2"> <?= $card11; ?> </h5>
                                 <p class="card-text">
-                                <form action="uyga_vazifa_4.2.php" method="get">
+                                <form action="uyga_vazifa_4.2.php" method="post">
                                     <input type="number" name="usd" class="form-control">
-                                    <input type="submit" name="s1" value="Send" class="btn btn-success mt-2">
+                                    <input type="submit" name="s1" value="Send" class="btn btn-success mt-2 mb-3"> <br>
+                                    <label class="form-label">UZS -> USD</label>
+                                    <input type="number" name="uzs" class="form-control">
+                                    <input type="submit" name="s2" value="Send" class="btn btn-success mt-2">
                                 </form>
                                 </p>
                                 <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
@@ -233,6 +216,387 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title"><?= $card5 . ':'; ?></h3>
+                                <h5 class="card-subtitle mb-2"> <?= $card51; ?> </h5>
+                                <p class="card-text">
+                                <form action="uyga_vazifa_4.5.php" method="post">
+                                    <input type="text" name="height" class="form-control mb-3" placeholder="Height of web-page in 'rem'">
+                                    <input type="text" name="width" class="form-control mb-3" placeholder="Width of web-page in 'rem'">
+                                    <input type="color" name="color" class="form-control mb-3">
+                                    <label>Position: </label> <br>
+                                    <input type="radio" name="position" class="form-check-input" value="left">
+                                    <label class="form-check-label">Left</label>
+                                    <input type="radio" name="position" class="form-check-input" value="center">
+                                    <label class="form-check-label">Center</label>
+                                    <input type="radio" name="position" class="form-check-input" value="right">
+                                    <label class="form-check-label">Right</label>
+                                    <input type="text" name="title" class="form-control mt-2 mb-3" placeholder="The title of web-page">
+                                    <input type="number" name="year" class="form-control mb-3" placeholder="The year of web-page">
+                                    <input type="text" name="author" class="form-control" placeholder="The author of web-page">
+                                    <input type="submit" name="s1" value="Send" class="btn btn-success mt-2">
+                                </form>
+                                </p>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title"><?= $card6 . ':'; ?></h3>
+                                <h5 class="card-subtitle mb-2"> <?= $card61; ?> </h5>
+                                <p class="card-text">
+                                <div>
+                                    <a href="uyga_vazifa_4.php?kitob=rus_tili&kitob2=ingliz_tili&kitob3=ona_tili">Kitoblar ro'yxati</a> <br>
+                                    <a href="uyga_vazifa_4.php?telefon=redmi&telefon2=samsung&telefon3=iphone">Telefonlar ro'yxati</a>
+                                </div>
+                                </p>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php
+                #region KITOB
+                    if (isset($_GET['kitob'])) : ?>
+                    <?php
+                    {
+                        $kitob_rus_tili = $_GET['kitob'];
+                        $kitob_ingliz_tili = $_GET['kitob2'];
+                        $kitob_ona_tili = $_GET['kitob3'];
+                    }
+                    ?>
+                    <div class="col-sm-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title"><?= "$card62"; ?></h3>
+                                <h5 class="card-subtitle mb-2"> </h5>
+                                <p class="card-text">
+                                <div>
+                                    <a href="uyga_vazifa_4.php?kitob=rus_tili&kitob2=ingliz_tili&kitob3=ona_tili&kitob_rus=rus_tili_haqida"> <?= $kitob_rus_tili?></a>
+                                    <br>
+                                    <a href="uyga_vazifa_4.php?kitob=rus_tili&kitob2=ingliz_tili&kitob3=ona_tili&kitob_ing=ingliz_tili_haqida"> <?= $kitob_ingliz_tili?></a>
+                                    <br>
+                                    <a href="uyga_vazifa_4.php?kitob=rus_tili&kitob2=ingliz_tili&kitob3=ona_tili&kitob_ona=ona_tili_haqida"> <?= $kitob_ona_tili?></a>
+                                </div>
+                                </p>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if (isset($_GET['kitob_rus'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Rus tili kitobi"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> <?= $card64; ?> </h5>
+                                    <p class="card-text">
+                                    <div>
+                                        <form action="" method="get">
+                                            <input type="number" name="book_amount" class="form-control mb-3" placeholder="How many books?">
+                                            <input name="book_price" class="form-control mb-3" value="<?= $pri = 25000;?>" readonly>
+                                            <input type="submit" name="cal_rus" class="btn btn-success" value="Calculate">
+                                        </form>
+                                    </div>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php elseif (isset($_GET['kitob_ing'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Ingliz tili kitobi"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> <?= $card64; ?> </h5>
+                                    <p class="card-text">
+                                    <div>
+                                        <form action="" method="get">
+                                            <input type="number" name="book_amount" class="form-control mb-3" placeholder="How many books?">
+                                            <input name="book_price" class="form-control mb-3" value="<?= $pri = 35000;?>" readonly>
+                                            <input type="submit" name="cal_ing" class="btn btn-success" value="Calculate">
+                                        </form>
+                                    </div>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php elseif (isset($_GET['kitob_ona'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Ona tili kitobi"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> <?= $card64; ?> </h5>
+                                    <p class="card-text">
+                                    <div>
+                                        <form action="" method="get">
+                                            <input type="number" name="book_amount" class="form-control mb-3" placeholder="How many books?">
+                                            <input name="book_price" class="form-control mb-3" value="<?= $pri = 45000;?>" readonly>
+                                            <input type="submit" name="cal_ona" class="btn btn-success" value="Calculate">
+                                        </form>
+                                    </div>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (isset($_GET['cal_rus'])) :?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Siz harid qilgan (". $_GET['book_amount'] .")ta, rus tili kitob(lar)ining umumiy narxi:"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> </h5>
+                                    <p class="card-text">
+                                    <div>
+                                        <form action="" method="get">
+                                            <input type="hidden" name="book_amount" class="form-control mb-3" placeholder="How many books?">
+                                            <input type="hidden" name="book_price" class="form-control mb-3" value="<?= $pri = 25000;?>" readonly>
+                                            <?php
+                                            $book_amount = $_GET['book_amount'];
+                                            $book_price = $_GET['book_price'];
+                                            $sum = $book_amount * $pri;
+                                            ?>
+                                            <input name="sum" class="form-control mt-3" value=" <?= $sum; ?>" readonly>
+                                            <a href="uyga_vazifa_4.php" class="btn btn-outline-danger mt-2">Rad etish</a>
+                                        </form>
+                                    </div>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php elseif (isset($_GET['cal_ing'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Siz harid qilgan (". $_GET['book_amount'] .")ta, ingliz tili kitob(lar)ining umumiy narxi:"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> </h5>
+                                    <p class="card-text">
+                                    <div>
+                                        <form action="" method="get">
+                                            <input type="hidden" name="book_amount" class="form-control mb-3" placeholder="How many books?">
+                                            <input type="hidden" name="book_price" class="form-control mb-3" value="<?= $pri = 35000;?>" readonly>
+                                            <?php
+                                            $book_amount = $_GET['book_amount'];
+                                            $book_price = $_GET['book_price'];
+                                            $sum = $book_amount * $pri;
+                                            ?>
+                                            <input name="sum" class="form-control mt-3" value=" <?= $sum; ?>" readonly>
+                                            <a href="uyga_vazifa_4.php" class="btn btn-outline-danger mt-2">Rad etish</a>
+                                        </form>
+                                    </div>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php elseif (isset($_GET['cal_ona'])) :?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Siz harid qilgan (". $_GET['book_amount'] .")ta, ona tili kitob(lar)ining umumiy narxi:"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> </h5>
+                                    <p class="card-text">
+                                    <div>
+                                        <form action="" method="get">
+                                            <input type="hidden" name="book_amount" class="form-control mb-3" placeholder="How many books?">
+                                            <input type="hidden" name="book_price" class="form-control mb-3" value="<?= $pri = 45000;?>" readonly>
+                                            <?php
+                                            $book_amount = $_GET['book_amount'];
+                                            $book_price = $_GET['book_price'];
+                                            $sum = $book_amount * $pri;
+                                            ?>
+                                            <input name="sum" class="form-control mt-3" value=" <?= $sum; ?>" readonly>
+                                            <a href="uyga_vazifa_4.php" class="btn btn-outline-danger mt-2">Rad etish</a>
+                                        </form>
+                                    </div>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif;
+                    #endregion
+                ?>
+
+                <?php
+                #region TELEFON
+                    if (isset($_GET['telefon'])): ?>
+                        <?php
+                        $telefon_redmi = $_GET['telefon'];
+                        $telefon_samsung = $_GET['telefon2'];
+                        $telefon_iphone = $_GET['telefon3'];
+                        ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= $card63; ?></h3>
+                                    <p class="card-text">
+                                    <div>
+                                        <a href="uyga_vazifa_4.php?telefon=redmi&telefon2=samsung&telefon3=iphone&redmi=redmi_haqida"> <?= $telefon_redmi ?> </a>
+                                        <br>
+                                        <a href="uyga_vazifa_4.php?telefon=redmi&telefon2=samsung&telefon3=iphone&samsung=samsung_haqida"> <?= $telefon_samsung ?> </a>
+                                        <br>
+                                        <a href="uyga_vazifa_4.php?telefon=redmi&telefon2=samsung&telefon3=iphone&iphone=iphone_haqida"> <?= $telefon_iphone ?> </a>
+                                    </div>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (isset($_GET['redmi'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Redmi telefoni"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> <?= $card65; ?> </h5>
+                                    <p class="card-text">
+                                    <form action="" method="get">
+                                        <input type="number" name="telefon_amount" class="form-control mb-3" placeholder="How many telephone?">
+                                        <input type="number" name="telephone_price" class="form-control mb-3" value="<?= $pri2 = 1800000; ?>" readonly>
+                                        <input type="submit" name="cal_redmi" value="Calculate" class="btn btn-success mt-2">
+                                    </form>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php elseif (isset($_GET['samsung'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Samsung telefoni"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> <?= $card65; ?> </h5>
+                                    <p class="card-text">
+                                    <form action="" method="get">
+                                        <input type="number" name="telefon_amount" class="form-control mb-3" placeholder="How many telephone?">
+                                        <input type="number" name="telephone_price" class="form-control mb-3" value="<?= $pri2 = 2200000; ?>">
+                                        <input type="submit" name="cal_samsung" value="Calculate" class="btn btn-success mt-2">
+                                    </form>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div> ?>
+                    <?php elseif (isset($_GET['iphone'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Iphone telefoni"; ?></h3>
+                                    <h5 class="card-subtitle mb-2"> <?= $card65; ?> </h5>
+                                    <p class="card-text">
+                                    <form action="" method="get">
+                                        <input type="number" name="telefon_amount" class="form-control mb-3" placeholder="How many telephone?">
+                                        <input type="number" name="telephone_price" class="form-control mb-3" value="<?= $pri2 = 3500000; ?>">
+                                        <input type="submit" name="cal_iphone" value="Calculate" class="btn btn-success mt-2">
+                                    </form>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div> ?>
+                    <?php endif; ?>
+
+                    <?php if (isset($_GET['cal_redmi'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Siz harid qilgan (". $_GET['telefon_amount'] .")ta, Redmi telefon(lar)ining umumiy narxi:"; ?></h3>
+                                    <p class="card-text">
+                                    <form action="" method="get">
+                                        <input type="hidden" name="telefon_amount" class="form-control mb-3" placeholder="How many telephone?">
+                                        <input type="hidden" name="telephone_price" class="form-control mb-3" value="<?= $pri2 = 1800000; ?>">
+                                        <?php
+                                        $telefon_amount = $_GET['telefon_amount'];
+                                        $telefon_price = $pri2;
+                                        $total = $telefon_amount * $telefon_price;
+                                        ?>
+                                        <input type="number" name="total" class="form-control mt-3" value="<?= $total; ?>">
+                                        <a href="uyga_vazifa_4.php" class="btn btn-outline-danger mt-2">Rad etish</a>
+                                    </form>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php elseif (isset($_GET['cal_samsung'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Siz harid qilgan (". $_GET['telefon_amount'] .")ta, Samsung telefon(lar)ining umumiy narxi:"; ?></h3>
+                                    <p class="card-text">
+                                    <form action="" method="get">
+                                        <input type="hidden" name="telefon_amount" class="form-control mb-3" placeholder="How many telephone?">
+                                        <input type="hidden" name="telephone_price" class="form-control mb-3" value="<?= $pri2 = 2200000; ?>">
+                                        <?php
+                                        $telefon_amount = $_GET['telefon_amount'];
+                                        $telefon_price = $pri2;
+                                        $total = $telefon_amount * $telefon_price;
+                                        ?>
+                                        <input type="number" name="total" class="form-control mt-3" value="<?= $total; ?>">
+                                        <a href="uyga_vazifa_4.php" class="btn btn-outline-danger mt-2">Rad etish</a>
+                                    </form>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php elseif (isset($_GET['cal_iphone'])): ?>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= "Siz harid qilgan (". $_GET['telefon_amount'] .")ta, Iphone telefon(lar)ining umumiy narxi:"; ?></h3>
+                                    <p class="card-text">
+                                    <form action="" method="get">
+                                        <input type="hidden" name="telefon_amount" class="form-control mb-3" placeholder="How many telephone?">
+                                        <input type="hidden" name="telephone_price" class="form-control mb-3" value="<?= $pri2 = 3500000; ?>">
+                                        <?php
+                                        $telefon_amount = $_GET['telefon_amount'];
+                                        $telefon_price = $pri2;
+                                        $total = $telefon_amount * $telefon_price;
+                                        ?>
+                                        <input type="number" name="total" class="form-control mt-3" value="<?= $total; ?>">
+                                        <a href="uyga_vazifa_4.php" class="btn btn-outline-danger mt-2">Rad etish</a>
+                                    </form>
+                                    </p>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                    <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif;
+                #endregion
+                ?>
+
                 </div>
             </div>
         </section>

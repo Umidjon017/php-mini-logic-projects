@@ -24,7 +24,7 @@
                         <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="app/index.php">App</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,9 +38,9 @@
                             <li><a class="dropdown-divider" href="#">3-PHP arraylar</a></li>
                             <li><a class="dropdown-item" href="../dars_3/uyga_vazifa_3.php">Uyga vazifa-3</a></li>
                             <li><a class="dropdown-divider" href="#">4-GET, POST, REQUEST</a></li>
-                            <li><a class="dropdown-item" href="uyga_vazifa_4.php">Uyga vazifa-4</a></li>
+                            <li><a class="dropdown-item" href="../dars_4/uyga_vazifa_4.php">Uyga vazifa-4</a></li>
                             <li><a class="dropdown-divider" href="#">5-SERVER requests</a></li>
-                            <li><a class="dropdown-item" href="../dars_5/uyga_vazifa_5.php">Uyga vazifa-5</a></li>
+                            <li><a class="dropdown-item" href="uyga_vazifa_5.php">Uyga vazifa-5</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
@@ -67,43 +67,34 @@
         $li4 = 'menu 3';
         $li5 = 'menu 4';
 
-        $card3 = "Registered user's information";
-        $card33 = "Go home";
-        $card34 = "Previous";
+        $card1 = 'Misol 1';
+        $card11 = "Login va Parol to'g'riligini tekshirish";
+
+        $cardbt = "To'g'ri";
+        $cardbf = "Noto'g'ri";
         ?>
         <section class="bs2">
             <div class="container">
-                <h1 class="display-2">Form exercises</h1>
+                <h1 class="display-2">PHP SERVER requests</h1>
                 <div class="row">
-                    <div class="col-sm-5 offset-4">
+                    <div class="col-sm-3 offset-4">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <h3 class="card-title"><?= $card3 . ':'; ?></h3>
-                                <h5 class="card-subtitle mb-2"> </h5>
+                                <h3 class="card-title"><?= $card1 . ':'; ?></h3>
+                                <h5 class="card-subtitle mb-2"> <?= $card11; ?> </h5>
                                 <p class="card-text">
-                                    <?php
-                                    echo "<pre>";
-                                    if ((isset($_GET['fname']) && isset($_GET['sname']) && isset($_GET['gender']) && isset($_GET['country']) && isset($_GET['village'])))
-                                    {
-                                        $fname = $_GET['fname'];
-                                        $sname = $_GET['sname'];
-                                        $gender = $_GET['gender'];
-                                        $country = $_GET['country'];
-                                        $village = $_GET['village'];
-                                    }
-                                    echo "</pre>";
-                                    ?>
-                                <h3 class="info">First name: <span> <?= $fname ?> </span> </h3>
-                                <h3 class="info">Second name: <span> <?= $sname ?> </span> </h3>
-                                <h3 class="info">Gender: <span> <?= $gender ?> </span> </h3>
-                                <h3 class="info">Country: <span> <?= $country ?> </span> </h3>
-                                <h3 class="info">Village: <span> <?= $village ?> </span> </h3>
+                                <form action="uyga_vazifa_5.3.php" method="post">
+                                    <input type="text" name="login" class="form-control mb-3" placeholder="admin">
+                                    <input type="text" name="password" class="form-control mb-3" placeholder="123456">
+                                    <input type="submit" class="btn btn-success" value="Submit">
+                                </form>
                                 </p>
-                                <a href="../index.php" class="card-link btn btn-dark"><?= $card33; ?> </a>
-                                <a href="uyga_vazifa_4.php" class="card-link btn btn-success"><?= $card34; ?> </a>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbt; ?> </a>
+                                <a href="#" class="card-link btn btn-dark"><?= $cardbf; ?> </a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

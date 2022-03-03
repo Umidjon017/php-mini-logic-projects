@@ -39,6 +39,8 @@
                             <li><a class="dropdown-item" href="../dars_3/uyga_vazifa_3.php">Uyga vazifa-3</a></li>
                             <li><a class="dropdown-divider" href="#">4-GET, POST, REQUEST</a></li>
                             <li><a class="dropdown-item" href="uyga_vazifa_4.php">Uyga vazifa-4</a></li>
+                            <li><a class="dropdown-divider" href="#">5-SERVER requests</a></li>
+                            <li><a class="dropdown-item" href="../dars_5/uyga_vazifa_5.php">Uyga vazifa-5</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
@@ -66,6 +68,7 @@
         $li5 = 'menu 4';
 
         $card3 = 'USD ning UZS dagi qiymati';
+        $card31 = 'UZS ning USD dagi qiymati';
         $card33 = "Go home";
         $card34 = "Previous";
         ?>
@@ -76,19 +79,33 @@
                     <div class="col-sm-5 offset-4">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <h3 class="card-title"><?= $card3 . ':'; ?></h3>
-                                <h5 class="card-subtitle mb-2"> </h5>
-                                <p class="card-text">
-                                <?php
-                                if (isset($_GET['usd']))
-                                {
-                                    $d = $_GET['usd'];
-                                    $u = $d * 10860;
-                                }
-                                ?>
-                                    <h3>USD: <span style="color: red"> <?= $d ?> </span> </h3>
-                                    <h3>UZS: <span style="color: blue"> <?= $u ?> </span> </h3>
-                                </p>
+                                <?php if (isset($_POST['s1']) && !empty($_POST['s1'])) : ?>
+                                    <h3 class="card-title"><?= $card3 . ':'; ?></h3>
+                                    <p class="card-text">
+                                        <?php
+                                        if (isset($_POST['usd']) && !empty($_POST['usd']))
+                                        {
+                                            $dollar = $_POST['usd'];
+                                            $uzsqiymat = $dollar * 10860;
+                                        }
+                                        ?>
+                                    <h3>USD: <span style="color: red"> <?= $dollar ?> </span> </h3>
+                                    <h3>UZS: <span style="color: blue"> <?= $uzsqiymat ?> </span> </h3>
+                                    </p>
+                                <?php elseif (isset($_POST['s2']) && !empty($_POST['s2'])) : ?>
+                                    <h3 class="card-title"><?= $card31 . ':'; ?></h3>
+                                    <p class="card-text">
+                                        <?php
+                                        if (isset($_POST['uzs']) && !empty($_POST['uzs']))
+                                        {
+                                            $uzs = $_POST['uzs'];
+                                            $usdqiymat = round($uzs / 10860);
+                                        }
+                                        ?>
+                                    <h3>UZS: <span style="color: red"> <?= $uzs ?> </span> </h3>
+                                    <h3>USD: <span style="color: blue"> <?= $usdqiymat ?> </span> </h3>
+                                    </p>
+                                <?php endif; ?>
                                 <a href="../index.php" class="card-link btn btn-dark"><?= $card33; ?> </a>
                                 <a href="uyga_vazifa_4.php" class="card-link btn btn-success"><?= $card34; ?> </a>
                             </div>

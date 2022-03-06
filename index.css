@@ -51,6 +51,10 @@ body {
     font-weight: 500;
 }
 
+.card .text-left {
+    text-align: left;
+}
+
 .card a {
     color: #999;
 }

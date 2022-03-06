@@ -49,6 +49,8 @@
                             <li><a class="dropdown-item" href="../dars_4/uyga_vazifa_4.php">Uyga vazifa-4</a></li>
                             <li><a class="dropdown-divider" href="#">5-SERVER requests</a></li>
                             <li><a class="dropdown-item" href="../dars_5/uyga_vazifa_5.php">Uyga vazifa-5</a></li>
+                            <li><a class="dropdown-divider" href="#">6 - PHP Upload files</a></li>
+                            <li><a class="dropdown-item" href="../dars_6/uyga_vazifa_6.php">Uyga vazifa-6</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>

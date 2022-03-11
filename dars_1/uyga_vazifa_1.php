@@ -51,6 +51,8 @@
                             <li><a class="dropdown-item" href="../dars_5/uyga_vazifa_5.php">Uyga vazifa-5</a></li>
                             <li><a class="dropdown-divider" href="#">6 - PHP Upload files</a></li>
                             <li><a class="dropdown-item" href="../dars_6/uyga_vazifa_6.php">Uyga vazifa-6</a></li>
+                            <li><a class="dropdown-divider" href="#">7 - Regular Expressions</a></li>
+                            <li><a class="dropdown-item" href="../dars_7/uyga_vazifa_7.php">Uyga vazifa-7</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>

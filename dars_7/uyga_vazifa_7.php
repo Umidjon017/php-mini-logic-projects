@@ -77,8 +77,8 @@
         $card13_birthDate = "/^([0-9]{2})\.([0-9]{2})\.([0-9]{4})$/"; // FOR BIRTH DATE
         $card14_email = "/^([a-z0-9]+)(.?[0-9]*)(.)([a-z]{1,5}\.[a-z]{1,4})$/i"; // FOR EMAIL
         $card15_number = "/^([0-9])-([0-9]{1,2})-([0-9]{3})-([0-9]{2})-([0-9]{2})$/"; // FOR NUMBER
-        $card16_login = "/^([a-z0-9]{1,30})([^!-*])$/i";
-        $card17_password = "/^([a-z!-*]{1,30})([^0-9])([a-z!-*]{1,30})([^0-9])$/";
+        $card16_login = "/^([a-z0-9]{1,30})([^!-*])$/i"; // FOR LOGIN
+        $card17_password = "/^([a-z!-*]{1,30})([^0-9])([a-z!-*]{1,30})([^0-9])$/"; // PASSWORD
 
         $card2 = 'Your Data';
         $card21 = "Registration form";
@@ -154,32 +154,32 @@
                                     if ($fullName) {
                                         echo "<span style='color: black' class='h5'>Full name: </span>" . $_POST['fullName']."<br>";
                                     } else {
-                                        echo "'Nameda' Xatolik mavjud";
+                                        echo "<span style='color: red'>'Nameda'</span> Xatolik mavjud";
                                     }
                                     if ($birthDate) {
                                         echo "<span style='color: black' class='h5'>Birth Date: </span>" . $_POST['year']."<br>";
                                     } else {
-                                        echo "'BirthDateda' Xatolik mavjud";
+                                        echo "<span style='color: red'>'BirthDateda'</span> Xatolik mavjud";
                                     }
                                     if ($email) {
                                         echo "<span style='color: black' class='h5'>Email: </span>" . $_POST['email']."<br>";
                                     } else {
-                                        echo "'Email' Xatolik mavjud";
+                                        echo "<span style='color: red'>'Email'</span> Xatolik mavjud";
                                     }
                                     if ($mnumber) {
                                         echo "<span style='color: black' class='h5'>Mobile Number: </span>" . $_POST['mnumber']."<br>";
                                     } else {
-                                        echo "'Mnumberda' Xatolik mavjud";
+                                        echo "<span style='color: red'>'Mnumberda'</span> Xatolik mavjud";
                                     }
                                     if ($login) {
                                         echo "<span style='color: black' class='h5'>Login: </span>" . $_POST['login']."<br>";
                                     } else {
-                                        echo "'Loginda' Xatolik mavjud";
+                                        echo "<span style='color: red'>'Loginda'</span> Xatolik mavjud";
                                     }
                                     if ($password) {
                                         echo "<span style='color: black' class='h5'>Password: </span>" . $_POST['password']."<br>";
                                     } else {
-                                        echo "'Psswordda' Xatolik mavjud";
+                                        echo "<span style='color: red'>'Psswordda'</span> Xatolik mavjud";
                                     }
                                     ?>
                                     <br>
